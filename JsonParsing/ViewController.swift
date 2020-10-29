@@ -25,9 +25,30 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         TableView.delegate=self
         TableView.dataSource=self
        // jsonFromFile()
-        jsonFromURL()
+    //    jsonFromURL()
+        
+        method(arg: true) { message,falg  in
+            print(message)
+            print(falg)
+        }
+        
     }
 
+    
+    
+    
+    func method(arg:Bool,returnFunction:(String,Bool)->()){
+    
+        returnFunction("Value is :",arg)
+        
+        print("Test")
+    
+    }
+    
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return obj.count
     }
@@ -95,6 +116,10 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         })
         task.resume()
     }
+    
+    
+    
+    
     
     
     
